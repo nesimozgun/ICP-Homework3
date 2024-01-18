@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "grocery_store_backend": {
+      "candid": "src/grocery_store_backend/grocery_store_backend.did",
+      "package": "grocery_store_backend",
+      "type": "rust"
+    },
+    "grocery_store_frontend": {
+      "dependencies": [
+        "grocery_store_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/grocery_store_frontend/src/index.html"
+      },
+      "source": [
+        "src/grocery_store_frontend/assets",
+        "dist/grocery_store_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
